@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.glider-container {
+  position: relative;
+}
+
+.glider-root {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+
+.glider-slide {
+  position: absolute;
+  will-change: transform;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 0;
+}
+
+.glider-item {
+  position: absolute;
+  will-change: transform;
+}
+
+.glider-slide.active {
+  opacity: 1;
+}
+
+.glider-slide.active .banner-bg {
+  transition: transform 8s linear 0s;
+  transform: translate(0%, 0%) scale(1.06);
+}
+
+.glider-slide.active .banner-bg-el1 {
+  transition: transform 8s linear 0s;
+  transform: translate(0%, 0%) scale(1.12);
+}
+
+.glider-slide.active .banner-bg-el2 {
+  transition: transform 8s linear 0s;
+  transform: translate(0%, 0%) scale(1.18);
+}
+
+.glider-slide.active .banner-bg-el3 {
+  transition: transform 8s linear 0s;
+  transform: translate(0%, 0%) scale(1.16);
+}
+
+/* Prev, Next Btns */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Banner Text */
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #22445b !important;
+}
+
+.banner-text h2 {
+  font-size: 60px;
+}
+
+.banner-text p {
+  font-size: 24px;
+}
